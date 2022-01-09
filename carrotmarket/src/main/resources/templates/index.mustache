@@ -1,0 +1,23 @@
+{{>layout/header}}
+<h1>스프링 부트 웹 프로젝트</h1>
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-6">
+            <a href="/posts/save" role="button" class="btn btn-primary">글쓰기</a>
+        </div>
+    </div>
+    <br />
+    <table class="table table-horizontal table-bordered">
+        <tbody id="tbody">
+            {{#memo}}
+            <tr>
+                <td>{{ mno }}</td>
+                <td>{{ memoText }}</td>
+                <td>{{ createdTime }}</td>
+                <td>{{ modifiedTime }}</td>
+            </tr>
+            {{/memo}}
+        </tbody>
+    </table>
+</div>
+{{>layout/footer}}
